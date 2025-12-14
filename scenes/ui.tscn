@@ -45,7 +45,6 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 
 [node name="ScoreTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="left" type="TextureButton" parent="."]
 offset_left = 339.0

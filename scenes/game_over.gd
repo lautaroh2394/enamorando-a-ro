@@ -3,7 +3,7 @@ extends Control
 var level_scene: PackedScene = load("res://scenes/level.tscn")
 
 func _ready() -> void:
-	$CenterContainer/VBoxContainer/Label2.text = "\nPuntaje: " + str(Global.score)
+	$CenterContainer/VBoxContainer/Label2.text = "\nPuntaje: " + str(Global.total_hit)
 	$CenterContainer/VBoxContainer/Label2.text += "\nLauti arrojó " + str(Global.total_shot) + " corazones\nAcertó " + str(Global.total_hit) + "\n"
 	if Global.total_hit >= 30:
 		$CenterContainer/VBoxContainer/Label3.visible = true

@@ -58,6 +58,7 @@ func _on_body_entered(_body: Node2D) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	Global.total_hit += 1
+	get_tree().call_group('ui', 'update_score')
 	area.queue_free()
 	$Explosion.stream = streams[rng.randi_range(0, len(streams)-1)]
 	$Explosion.play()

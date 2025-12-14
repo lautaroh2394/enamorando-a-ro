@@ -39,3 +39,9 @@ func _on_left_button_up() -> void:
 	
 func _on_right_button_up() -> void:
 	Input.action_release("right")
+
+func update_score():
+	$MarginContainer/Label.text = str(Global.total_hit)
+	if Global.total_hit >= 30:
+		$MarginContainer/Label.set("theme_override_colors/font_color",Color("2a7c50"))
+	
