@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://boweyuy0om7og"]
+
+[ext_resource type="PackedScene" uid="uid://dtm62roqh0bvx" path="res://scenes/meteor.tscn" id="1_rfv1k"]
+[ext_resource type="Texture2D" uid="uid://b0gjuykruk0q1" path="res://graphics/rocio/caras/rocio_3-50x50.png" id="2_ct4ud"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ylfl8"]
+radius = 94.0
+height = 238.0
+
+[node name="ro_3" instance=ExtResource("1_rfv1k")]
+
+[node name="MeteorImage" parent="." index="0"]
+texture = ExtResource("2_ct4ud")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_ylfl8")

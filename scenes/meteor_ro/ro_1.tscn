@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgqppn1mubms1"]
+
+[ext_resource type="PackedScene" uid="uid://dtm62roqh0bvx" path="res://scenes/meteor.tscn" id="1_e2d74"]
+[ext_resource type="Texture2D" uid="uid://c5xpb3ycwisni" path="res://graphics/rocio/caras/rocio_1-50x50.png" id="2_s0olu"]
+
+[node name="Ro1" instance=ExtResource("1_e2d74")]
+
+[node name="MeteorImage" parent="." index="0"]
+texture = ExtResource("2_s0olu")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(3, 0)

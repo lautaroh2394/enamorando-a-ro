@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cugwn2njf7sco"]
+
+[ext_resource type="PackedScene" uid="uid://dtm62roqh0bvx" path="res://scenes/meteor.tscn" id="1_53ski"]
+[ext_resource type="Texture2D" uid="uid://jxbnq5r74ybo" path="res://graphics/rocio/caras/rocio_8-50x50.png" id="2_wxcii"]
+
+[node name="ro_8" instance=ExtResource("1_53ski")]
+
+[node name="MeteorImage" parent="." index="0"]
+texture = ExtResource("2_wxcii")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://mf0r660hiwwp"]
+
+[ext_resource type="Script" uid="uid://d047vc74xhgtv" path="res://scenes/ui.gd" id="1_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://crmwbb32n07bu" path="res://graphics/Backgrounds/darkPurple.png" id="2_8dubc"]
+[ext_resource type="Texture2D" uid="uid://b3gsecgwqt2ax" path="res://graphics/rocio/left.png" id="2_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://cc2khky1ipfg8" path="res://graphics/rocio/left-pressed.png" id="3_8dubc"]
+[ext_resource type="Texture2D" uid="uid://cbk7ayli5m34k" path="res://graphics/rocio/right.png" id="4_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://de6rgkhpp4utg" path="res://graphics/rocio/right-pressed.png" id="5_ktti3"]
+
+[node name="UI" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_x4jx1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 167.0
+texture = ExtResource("2_8dubc")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 721.0
+offset_bottom = 110.0
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 65
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -408.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="ScoreTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="left" type="TextureButton" parent="."]
+offset_left = 339.0
+offset_top = 1698.0
+offset_right = 539.0
+offset_bottom = 1898.0
+texture_normal = ExtResource("2_wm3ai")
+texture_pressed = ExtResource("3_8dubc")
+
+[node name="right" type="TextureButton" parent="."]
+offset_left = 607.0
+offset_top = 1696.0
+offset_right = 807.0
+offset_bottom = 1896.0
+texture_normal = ExtResource("4_p7vwb")
+texture_pressed = ExtResource("5_ktti3")
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="button_down" from="left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="left" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="right" to="." method="_on_right_button_up"]
