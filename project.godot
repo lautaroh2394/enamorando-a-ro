@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="enamorando a ro"
+config/name="enamorandome de ro"
 run/main_scene="uid://csils4ntrw5ga"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/low_processor_mode=true
-config/icon="uid://c6u8un603yjp2"
+config/icon="uid://2vi0g8qbv7v4"
 
 [autoload]
 
